@@ -1,4 +1,7 @@
 import clsx from 'clsx';
+import { Button } from "@/components/ui/button";
+import { GridPattern } from '../ui/shadcn-io/grid-pattern';
+import { cn } from '@/lib/utils';
 
 //styles
 //--------------------------------------------------------------------//
@@ -9,7 +12,8 @@ const sectionStyles = clsx(
   'flex-col',
   'justify-center',
   'items-center',
-  'gap-6'
+  'gap-6',
+  'relative'
 );
 
 const headlineStyles = clsx(
@@ -21,21 +25,22 @@ const headlineStyles = clsx(
   'text-center'
 );
 
-const buttonStyles = clsx(
-  'bg-blue-600',
-  'text-white',
-  'rounded-lg',
-  'px-6',     
-  'py-3',      
-  'hover:bg-blue-700',
-  'transition-colors'
-);
-
 //--------------------------------------------------------------------//
+
 
 export default function Hero() {
   return (
     <section className={sectionStyles}>
+      <GridPattern
+        width={50}
+        height={40}
+        x={-1}
+        y={-1}
+        strokeDasharray={"4 2"}
+        className={cn(
+          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
+        )}
+      />
       <h1 className={headlineStyles}>
         Hello, I'm a Full Stack Developer
       </h1>
@@ -45,9 +50,7 @@ export default function Hero() {
         inventore voluptate reprehenderit, obcaecati dolor. Culpa
         excepturi commodi a beatae, eaque nemo ipsa aliquid!
       </p>
-      <button className={buttonStyles}>
-        Contact Me  
-      </button>
+      <Button size="lg">Get in Touch</Button>
     </section>
   )
 }

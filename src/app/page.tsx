@@ -8,18 +8,20 @@ import { GithubButton } from '../components/ui/github-button';
 import { FacebookButton } from '@/components/ui/facebook-button';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import MarqueeSkills from '@/components/landing-page/MarqueeSkills';
 
 //styles
 //--------------------------------------------------------------------//
 
 const headerStyles = clsx(
+  "relative",
   "body-font",
   "fixed",
   "top-0",
   "w-full",
   "shadow-md",
   "bg-background",
-  "z-50"
+  "z-50",
 );
 
 const headerContainerStyles = clsx(
@@ -140,7 +142,7 @@ export function Header() {
           >
             Blog
           </a>
-          
+
           {/* Mobile Buttons */}
           <div className="flex items-center gap-4 pt-6">
             <FacebookButton />
@@ -156,9 +158,21 @@ export function Header() {
 export default function Home() {
   return (
     <main>
-      <Header />
-      <Hero />
-      <About />
+      <section>
+        <Header />
+      </section>
+
+      <section>
+        <Hero />
+      </section>
+
+      <section>
+        <MarqueeSkills />
+      </section>
+
+      <section>
+        <About />
+      </section>
     </main>
   )
 }

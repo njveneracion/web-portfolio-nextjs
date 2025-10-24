@@ -14,7 +14,7 @@ export function FacebookButton() {
         size="icon"
         aria-label="Submit"
       >
-        <GrFacebookOption className="text-blue-600" />
+        <GrFacebookOption />
       </Button>
     </a>
   )
