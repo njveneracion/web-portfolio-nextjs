@@ -14,7 +14,6 @@ import MarqueeSkills from '@/components/landing-page/MarqueeSkills';
 //--------------------------------------------------------------------//
 
 const headerStyles = clsx(
-  "relative",
   "body-font",
   "fixed",
   "top-0",
