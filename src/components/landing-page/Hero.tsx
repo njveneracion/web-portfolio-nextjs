@@ -30,7 +30,8 @@ const headlineStyles = clsx(
   'text-5xl',
   'md:text-6xl',
   'lg:text-7xl',
-  'text-center'
+  'text-center',
+  'z-10',
 );
 
 const wrapperClassName = clsx(
@@ -63,12 +64,13 @@ export default function Hero() {
         y={-1}
         strokeDasharray={"4 2"}
         className={cn(
-          "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+          "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
         )}
       />
       <h1 className={headlineStyles}>
         <span>Hello</span>
-        <MdWavingHand className="inline mb-3 mx-3" />
+        <MdWavingHand className="inline mb-3 mx-3 text-yellow-500 animate-pulse" />
+        !
         <Typewriter
           options={{
             strings: typewriterData,
