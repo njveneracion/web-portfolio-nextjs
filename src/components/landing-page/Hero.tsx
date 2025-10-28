@@ -1,7 +1,5 @@
 import clsx from 'clsx';
 import { Button } from "@/components/ui/button";
-import { GridPattern } from '../ui/shadcn-io/grid-pattern';
-import { cn } from '@/lib/utils';
 import Typewriter from 'typewriter-effect';
 import { MdWavingHand } from "react-icons/md";
 
@@ -20,8 +18,7 @@ const sectionStyles = clsx(
   'flex-col',
   'justify-center',
   'items-center',
-  'gap-6',
-  'relative'
+  'gap-6'
 );
 
 const headlineStyles = clsx(
@@ -36,8 +33,8 @@ const headlineStyles = clsx(
 
 const wrapperClassName = clsx(
   'bg-gradient-to-r',
-  'from-blue-500',
-  'to-purple-600',
+  'from-green-500',
+  'to-blue-600',
   'bg-clip-text',
   'text-transparent'
 );
@@ -45,11 +42,18 @@ const wrapperClassName = clsx(
 const ctaStyles = clsx(
   'mt-8',
   'bg-gradient-to-r',
-  'from-blue-500',
-  'to-purple-600',
+  'from-green-500',
+  'to-blue-600',
   'text-white',
-  'hover:from-blue-600',
-  'hover:to-purple-700'
+  'hover:from-green-600',
+  'hover:to-blue-700'
+);
+
+const wavingHandStyles = clsx(
+  'inline',
+  'mb-3',
+  'mx-3',
+  'text-yellow-500'
 );
 
 //--------------------------------------------------------------------//
@@ -57,19 +61,9 @@ const ctaStyles = clsx(
 export default function Hero() {
   return (
     <section className={sectionStyles}>
-      <GridPattern
-        width={50}
-        height={40}
-        x={-1}
-        y={-1}
-        strokeDasharray={"4 2"}
-        className={cn(
-          "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
-        )}
-      />
       <h1 className={headlineStyles}>
         <span>Hello</span>
-        <MdWavingHand className="inline mb-3 mx-3 text-yellow-500 animate-pulse" />
+        <MdWavingHand className={wavingHandStyles} />
         !
         <Typewriter
           options={{

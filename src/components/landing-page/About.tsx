@@ -1,18 +1,155 @@
-import React from 'react'
+"use client";
+import clsx from 'clsx';
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+//styles
+//--------------------------------------------------------------------//
+
+const headlineStyles = clsx(
+  'font-bold',
+  'text-4xl',
+  'md:text-5xl',
+  'lg:text-6xl',
+  'text-center',
+  'mb-6',
+  'bg-gradient-to-r',
+  'from-green-500',
+  'to-blue-600',
+  'bg-clip-text',
+  'text-transparent'
+);
+
+const textStyles = clsx(
+  'bg-gradient-to-r',
+  'from-green-500',
+  'to-blue-600',
+  'bg-clip-text',
+  'text-transparent',
+  'font-semibold',
+  'text-3xl',
+  'mb-2',
+  'font-bold'
+);
+
+const cardContentStyles = clsx(
+  'flex',
+  'aspect-square',
+  'items-center',
+  'justify-center',
+  'p-6'
+);
+
+//--------------------------------------------------------------------//
+
+//image data
+//--------------------------------------------------------------------//
+
+const images = [
+ {   src: "/images/about/photo1.jpg", alt: "About Image 1" },
+ {   src: "/images/about/photo2.jpg", alt: "About Image 2" },
+ {   src: "/images/about/photo3.jpg", alt: "About Image 3" },
+ {   src: "/images/about/photo4.jpg", alt: "About Image 4" },
+]
 
 export default function About() {
+
   return (
     <section
-      className="px-6 py-20 max-w-7xl mx-auto"
+      className="px-6 py-20 max-w-7xl mx-auto relative"
       id="about"
     >
-      <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
+     
+
+      <h2 className={headlineStyles}>About Me</h2>
       <p className="text-lg max-w-3xl mx-auto text-center">
-        I'm a passionate Full Stack Developer with experience in building 
-        dynamic and responsive web applications. I love working with modern 
-        technologies and continuously improving my skills to deliver high-
-        quality solutions.
+        I'm a developer that is enthusiast with many things, I love
+        creating beautiful and functional web applications. With a strong
+        attention to detail and a passion for user experience, I treat my
+        code as an art so expect a clean and efficient codebase. When I'm
+        not coding, you can find me in nature taking photos, traveling to
+        new places, or reading books to expand my knowledge.
       </p>
+
+      <div className="mt-12 grid grid-cols-1 gap-13 md:grid-cols-2">
+        {/* Image Gallery */}
+        <div>
+          <Carousel>
+            <CarouselContent>
+              {images.map((image) => (
+                <CarouselItem key={image.src}>
+                  <Card>
+                    <CardContent className={cardContentStyles}>
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="object-cover w-full h-full rounded"
+                      />
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
+        {/* Information about me */}
+        <div className="flex flex-col justify-center ms-10">
+          {/* Work Experience */}
+          <div className="mb-8">
+            <h3 className={textStyles}>Work Experience</h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>
+                <strong>Senior Developer</strong> at Tech Solutions 
+                (2021 - Present)
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti temporibus provident ducimus repellat nisi
+                accusamus commodi modi laborum, laudantium alias error
+                esse assumenda molestias, officiis reiciendis neque velit.
+                Aperiam, suscipit?
+              </li>
+              <li>
+                <strong>Intern Developer</strong> at Web Innovators
+                (2020 - 2021)
+                <br />
+                Assisted in building web features and fixing bugs in
+                existing applications.
+              </li>
+            </ul>
+          </div>
+
+          {/* Skills & Technologies */}
+          <div className="mb-8">
+            <h3 className={textStyles}>Skills & Technologies</h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>JavaScript, TypeScript, React, Next.js</li>
+              <li>Node.js, Express, MongoDB</li>
+              <li>HTML5, CSS3, Tailwind CSS</li>
+              <li>Git, GitHub</li>
+            </ul>
+          </div>
+
+          {/* Hobby */}
+          <div>
+            <h3 className={textStyles}>Hobbies</h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Photography</li>
+              <li>Traveling</li>
+              <li>Reading</li>
+              <li>Coding</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

@@ -9,6 +9,9 @@ import { FacebookButton } from '@/components/ui/facebook-button';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import MarqueeSkills from '@/components/landing-page/MarqueeSkills';
+import { cn } from "@/lib/utils";
+import { GridPattern } from "@/components/ui/shadcn-io/grid-pattern";
+import Projects from '@/components/landing-page/Projects';
 
 //styles
 //--------------------------------------------------------------------//
@@ -63,10 +66,18 @@ const mobileMenuStyles = clsx(
   "space-y-6"
 );
 
+const logoNameStyles = clsx(
+  'ml-3',
+  'text-xl',
+  'font-bold',
+  'bg-gradient-to-r',
+  'from-green-400',
+  'to-blue-500',
+  'bg-clip-text',
+  'text-transparent'
+);
+
 //--------------------------------------------------------------------//
-
-
-
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,7 +93,7 @@ export function Header() {
               alt="logo"
               className="w-10 h-10 rounded-full"
             />
-            <span className="ml-3 text-xl font-semibold">NJ Veneracion</span>
+            <span className={logoNameStyles}>NJ Veneracion</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -157,20 +168,57 @@ export function Header() {
 export default function Home() {
   return (
     <main>
+      {/* Header Section */}
       <section>
         <Header />
       </section>
 
-      <section>
+      {/* Hero Section */}
+      <section className="relative">
+        <GridPattern
+          width={50}
+          height={40}
+          strokeDasharray={"20 5"}
+          className={cn(
+            "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
+          )}
+        />
         <Hero />
       </section>
 
+      {/* Marquee Skills Section */}
       <section>
         <MarqueeSkills />
       </section>
 
-      <section>
+      {/* About Section */}
+      <section className="relative">
+        <GridPattern
+          width={50}
+          height={40}
+          x={-1}
+          y={-1}
+          strokeDasharray={"20 6"}
+          className={cn(
+            "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
+          )}
+        />
         <About />
+      </section>
+
+      {/* Projects Section */}
+      <section className="relative">
+        <GridPattern
+          width={50}
+          height={40}
+          x={-1}
+          y={-1}
+          strokeDasharray={"20 6"}
+          className={cn(
+            "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
+          )}
+        />
+        <Projects />
       </section>
     </main>
   )

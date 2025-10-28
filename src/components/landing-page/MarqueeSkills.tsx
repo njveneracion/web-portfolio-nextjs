@@ -17,6 +17,7 @@ import {
 const marqueeStyles = clsx(
   'w-full',
   'mt-10',
+  'mb-10',
   'py-5',
   'bg-black/10',
 );
