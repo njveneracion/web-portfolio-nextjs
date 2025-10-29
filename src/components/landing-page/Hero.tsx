@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Typewriter from 'typewriter-effect';
 import { MdWavingHand } from "react-icons/md";
 
+
 const typewriterData = [
   "I'm a Full Stack Developer",
   "I build web applications",
