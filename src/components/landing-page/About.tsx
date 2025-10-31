@@ -1,13 +1,5 @@
 "use client";
 import clsx from 'clsx';
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 //styles
 //--------------------------------------------------------------------//
@@ -38,25 +30,25 @@ const textStyles = clsx(
   'font-bold'
 );
 
-const cardContentStyles = clsx(
-  'flex',
-  'aspect-square',
-  'items-center',
-  'justify-center',
-  'p-6'
-);
+// const cardContentStyles = clsx(
+//   'flex',
+//   'aspect-square',
+//   'items-center',
+//   'justify-center',
+//   'p-6'
+// );
 
 //--------------------------------------------------------------------//
 
 //image data
 //--------------------------------------------------------------------//
 
-const images = [
- {   src: "/images/about/photo1.jpg", alt: "About Image 1" },
- {   src: "/images/about/photo2.jpg", alt: "About Image 2" },
- {   src: "/images/about/photo3.jpg", alt: "About Image 3" },
- {   src: "/images/about/photo4.jpg", alt: "About Image 4" },
-]
+// const images = [
+//  {   src: "/images/about/photo1.jpg", alt: "About Image 1" },
+//  {   src: "/images/about/photo2.jpg", alt: "About Image 2" },
+//  {   src: "/images/about/photo3.jpg", alt: "About Image 3" },
+//  {   src: "/images/about/photo4.jpg", alt: "About Image 4" },
+// ]
 
 export default function About() {
 
@@ -65,21 +57,19 @@ export default function About() {
       className="px-6 py-20 max-w-7xl mx-auto relative"
       id="about"
     >
-     
-
       <h2 className={headlineStyles}>About Me</h2>
       <p className="text-lg max-w-3xl mx-auto text-center">
-        I'm a developer that is enthusiast with many things, I love
+        I&#39;m a developer that is enthusiast with many things, I love
         creating beautiful and functional web applications. With a strong
         attention to detail and a passion for user experience, I treat my
-        code as an art so expect a clean and efficient codebase. When I'm
+        code as an art so expect a clean and efficient codebase. When I&#39;m
         not coding, you can find me in nature taking photos, traveling to
         new places, or reading books to expand my knowledge.
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-13 md:grid-cols-2">
         {/* Image Gallery */}
-        <div>
+        {/* <div>
           <Carousel>
             <CarouselContent>
               {images.map((image) => (
@@ -99,7 +89,7 @@ export default function About() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        </div>
+        </div> */}
 
         {/* Information about me */}
         <div className="flex flex-col justify-center ms-10">

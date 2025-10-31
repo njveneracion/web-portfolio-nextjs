@@ -65,13 +65,13 @@ export default function Hero() {
       <h1 className={headlineStyles}>
         <span>Hello</span>
         <MdWavingHand className={wavingHandStyles} />
-        !
+        !&#39;
         <Typewriter
           options={{
-            strings: typewriterData,
             autoStart: true,
-            loop: true,
             delay: 50,
+            loop: true,
+            strings: typewriterData,
             wrapperClassName: wrapperClassName
           }}
         />
@@ -82,7 +82,12 @@ export default function Hero() {
         inventore voluptate reprehenderit, obcaecati dolor. Culpa
         excepturi commodi a beatae, eaque nemo ipsa aliquid!
       </p>
-      <Button className={ctaStyles} size="lg">Get in Touch</Button>
+      <Button
+        className={ctaStyles}
+        size="lg"
+      >
+        Get in Touch
+      </Button>
     </section>
   )
 }

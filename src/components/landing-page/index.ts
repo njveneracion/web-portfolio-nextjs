@@ -1,2 +1,9 @@
-export { default as Hero } from './Hero';
-export { default as About } from './About';
+import About from "./About";
+import Hero from "./Hero";
+import Projects from "./Projects";
+
+export {
+  About,
+  Hero,
+  Projects
+} 

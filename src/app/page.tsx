@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import clsx from 'clsx';
+import Image from 'next/image';
 import { Hero, About } from '../components/landing-page';
 import { ModeToggle } from '../components/ui/toggle-theme';
 import { GithubButton } from '../components/ui/github-button';
@@ -88,10 +89,12 @@ export function Header() {
         <div className={headerContainerStyles}>
           {/* Logo */}
           <a className="flex title-font font-medium items-center">
-            <img
-              src="https://tr.rbxcdn.com/180DAY-c61af60472ca1c4a27e7d9f819cce3de/420/420/FaceAccessory/Webp/noFilter"
-              alt="logo"
-              className="w-10 h-10 rounded-full"
+            <Image
+              src="/images/anime_logo.jpg"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="rounded-full"
             />
             <span className={logoNameStyles}>NJ Veneracion</span>
           </a>

@@ -1,14 +1,3 @@
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-
-import Image from "next/image"
 
 import clsx from "clsx"
 
@@ -29,26 +18,26 @@ const headerTitleStyles = clsx(
 //projects data
 //--------------------------------------------------------------------//
 
-const projects = [
-  {
-    title: "Project One",
-    description: "Description for project one.",
-    imageUrl: "/path/to/image1.jpg",
-    projectUrl: "https://example.com/project-one",
-  },
-  {
-    title: "Project Two",
-    description: "Description for project two.",
-    imageUrl: "/path/to/image2.jpg",
-    projectUrl: "https://example.com/project-two",
-  },
-  {
-    title: "Project Three",
-    description: "Description for project three.",
-    imageUrl: "/path/to/image3.jpg",
-    projectUrl: "https://example.com/project-three",
-  },
-]
+// const projects = [
+//   {
+//     title: "Project One",
+//     description: "Description for project one.",
+//     imageUrl: "/path/to/image1.jpg",
+//     projectUrl: "https://example.com/project-one",
+//   },
+//   {
+//     title: "Project Two",
+//     description: "Description for project two.",
+//     imageUrl: "/path/to/image2.jpg",
+//     projectUrl: "https://example.com/project-two",
+//   },
+//   {
+//     title: "Project Three",
+//     description: "Description for project three.",
+//     imageUrl: "/path/to/image3.jpg",
+//     projectUrl: "https://example.com/project-three",
+//   },
+// ]
 
 //component
 //--------------------------------------------------------------------//
@@ -58,7 +47,7 @@ export default function Projects() {
     <section id="projects" className="px-6 py-20 max-w-7xl mx-auto mt-10">
       <h2 className={headerTitleStyles}>My Projects</h2>
 
-      <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-5 mt-10 grid-cols-1">
+      {/* <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-5 mt-10 grid-cols-1">
         {projects.map(projects => (
           <Card>
             <CardHeader>
@@ -76,7 +65,7 @@ export default function Projects() {
             </CardHeader>
           </Card>
         ))}
-      </div>
+      </div> */}
     </section>
   )
 }
