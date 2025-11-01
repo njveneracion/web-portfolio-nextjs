@@ -50,7 +50,7 @@ const techLogos = [
 
 export default function MarqueeSkills() {
   return (
-    <section>
+    <section className="w-full overflow-x-hidden">
       <Marquee
         className={marqueeStyles}
         gradient={false}

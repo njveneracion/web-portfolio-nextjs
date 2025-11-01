@@ -29,13 +29,13 @@ const projects = [
   {
     title: "Project One",
     description: "Description for project one.",
-    imageUrl: "/images/anime_logo.jpg",
+    imageUrl: "/images/anime.jpg",
     projectUrl: "https://example.com/project-one",
   },
   {
     title: "Project Two",
     description: "Description for project two.",
-    imageUrl: "/images/anime_logo.jpg",
+    imageUrl: "/images/anime_2.jpg",
     projectUrl: "https://example.com/project-two",
   },
   {

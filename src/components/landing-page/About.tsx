@@ -62,9 +62,9 @@ const images = [
 
 const workExperience = [
   {
-    position: "Web Developer Intern",
-    company: "Shoppable Business",
-    duration: "August - November 2025",
+    position: "Software Engineer",
+    company: "Oracle",
+    duration: "August 2025 - Present",
     description: "Developed and maintained web applications using React and Node.js. Collaborated with the design team to implement user-friendly interfaces."
   },
   {
@@ -72,6 +72,12 @@ const workExperience = [
     company: "Seven365 Inc.",
     duration: "January - May 2025",
     description: "Assisted in testing web applications, reporting bugs, and ensuring software quality."
+  },
+  {
+    position: "Web Development Intern",
+    company: "Seven365 Inc.",
+    duration: "January - May 2025",
+    description: "Assisted in developing and maintaining web applications, collaborating with the design team to implement user-friendly interfaces."
   }
 ]
 
@@ -126,7 +132,7 @@ export default function About() {
                   <br />
                   ({work.duration})
                   <br />
-                  {work.description}
+                  <span className="text-gray-400">{work.description}</span>
                 </li>
               ))}
             </ul>
@@ -147,7 +153,7 @@ export default function About() {
           <div>
             <h3 className={textStyles}>Hobbies</h3>
             <ul className="list-disc list-inside space-y-2">
-              <li>Photography</li>
+              <li>Web3 & Blockchain</li>
               <li>Traveling</li>
               <li>Reading</li>
               <li>Coding</li>

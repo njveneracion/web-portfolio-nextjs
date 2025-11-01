@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/ui/shadcn-io/grid-pattern";
 import Projects from '@/components/landing-page/Projects';
 import Contact from '@/components/landing-page/Contact';
+import Note from '@/components/landing-page/Note';
 
 //styles
 //--------------------------------------------------------------------//
@@ -21,11 +22,10 @@ import Contact from '@/components/landing-page/Contact';
 const headerStyles = clsx(
   "body-font",
   "fixed",
-  "top-0",
   "w-full",
   "shadow-md",
   "bg-background",
-  "z-50",
+  "z-50"
 );
 
 const headerContainerStyles = clsx(
@@ -35,7 +35,7 @@ const headerContainerStyles = clsx(
   "flex-wrap",
   "p-3",
   "items-center",
-  "justify-between"
+  "justify-between",
 );
 
 const desktopNavStyles = clsx(
@@ -137,7 +137,7 @@ export function Header() {
           </a>
           <a
             href="#projects"
-            className="text-lg"
+            className="text-lg "
             onClick={() => setIsMenuOpen(false)}
           >
             Projects
@@ -171,7 +171,10 @@ export function Header() {
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
+     <section className='fixed bottom-5 z-20 left-5'>
+       <Note />
+     </section>
       {/* Header Section */}
       <section>
         <Header />
