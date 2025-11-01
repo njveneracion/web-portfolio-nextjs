@@ -7,7 +7,7 @@ import { MdWavingHand } from "react-icons/md";
 const typewriterData = [
   "I'm a Full Stack Developer",
   "I build web applications",
-  "I treat code as an art",
+  "Code is poetry",
 ];
 
 //styles
@@ -65,7 +65,7 @@ export default function Hero() {
       <h1 className={headlineStyles}>
         <span>Hello</span>
         <MdWavingHand className={wavingHandStyles} />
-        !&#39;
+        !
         <Typewriter
           options={{
             autoStart: true,

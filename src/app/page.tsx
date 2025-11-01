@@ -13,6 +13,7 @@ import MarqueeSkills from '@/components/landing-page/MarqueeSkills';
 import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/ui/shadcn-io/grid-pattern";
 import Projects from '@/components/landing-page/Projects';
+import Contact from '@/components/landing-page/Contact';
 
 //styles
 //--------------------------------------------------------------------//
@@ -195,33 +196,18 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="relative">
-        <GridPattern
-          width={50}
-          height={40}
-          x={-1}
-          y={-1}
-          strokeDasharray={"20 6"}
-          className={cn(
-            "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
-          )}
-        />
+      <section id="about">
         <About />
       </section>
 
       {/* Projects Section */}
-      <section className="relative">
-        <GridPattern
-          width={50}
-          height={40}
-          x={-1}
-          y={-1}
-          strokeDasharray={"20 6"}
-          className={cn(
-            "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
-          )}
-        />
+      <section id="projects">
         <Projects />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="relative">
+        <Contact />
       </section>
     </main>
   )
